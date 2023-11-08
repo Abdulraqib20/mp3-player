@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="fontawesome-free-5.15.1-web/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Mp3 Player</title>
+</head>
+<body>
+    <div class="main">
+        <p id="logo" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-weight: bolder;"><i class="fa fa-music" aria-hidden="true"></i>MP3 Player</p>
+        <div class="left">
+            
+                <img src="" id="track_image" alt="">
+                
+                <div class="volume">
+                
+                    <p id="volume_show">50</p>
+                    <i class="fa fa-volume-up" aria-hidden="true" id="volume_icon" onclick="mute_sound()"></i>
+                    <input type="range" class="ranger" min="0" max="100" value="50" onchange="volume_change()" id="volume">
+                </div>
+        </div>
+
+        <div class="right">
+            <div class="show_song_no">
+                <p id="present">1</p>
+                <p>of</p>
+                <p id="total">5</p>
+            </div>
+            <p id="title" style="font-family: Georgia, 'Times New Roman', Times, serif;">title.mp3</p>
+            <p id="artist" style="font-family: Georgia, 'Times New Roman', Times, serif;">Artist name</p>
+            <div class="middle">
+                <button onclick="previous_song()" id="pre"><i class="fa fa-step-backward" aria-hidden="true"></i></button>
+                <button onclick="justplay()" id="play"><i class="fa fa-play" aria-hidden="true"></i></button>
+                <button onclick="next_song()" id="next"><i class="fa fa-step-forward" aria-hidden="true"></i></button>
+            </div>
+
+            <div class="duration">
+                <input type="range"  min="0" max="100" value="0" id="duration_slider" onchange="change_duration()">
+            </div>
+            <button id="auto" onclick="autoplay_switch()">Auto-Play</button>
+
+            
+
+        </div>
+        <marquee behavior="" direction="left" class="marque">Developed by RAQIB Innovations Inc.<sup>&reg;</sup> 2022</marquee>
+
+    </div>
+    
+
+    <script src="Music player by Raqib.js"></script>
+    
+</body>
+</html>
